@@ -1,0 +1,51 @@
+package com.maven.torialsninja.TestCases;
+
+import org.openqa.selenium.By;
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+import com.maven.torialsninja.pageobject.LoginPage;
+
+
+public class Testcase03InValidEmailAndvalidPassword extends Baseclass {
+
+	@Test
+	public void logittest() throws InterruptedException {
+		
+		
+		driver.get(url);
+		driver.findElement(By.cssSelector(".caret")).click();
+
+		 driver.findElement(By.xpath("//ul[@class='list-inline']/descendant::li[4]")).click();
+		 
+			
+		 
+		 
+			
+			LoginPage lg =new LoginPage(driver);
+			
+			
+			lg.setusername(username);
+
+			lg.setpassword(invalidpassword);
+
+			
+			lg.clickbuton();
+			String actualwarninmessage=driver.findElement(By.cssSelector(".alert.alert-danger.alert-dismissible")).getText();
+			String expectedwarninmessage="Warning: No match for E-Mail Address and/or Password.";
+			
+			
+			if(actualwarninmessage.equals(expectedwarninmessage)) {
+				
+				Assert.assertTrue(true);
+				
+			}else {
+				
+				Assert.assertTrue(false);
+			}
+			
+			
+			
+	
+}
+}
