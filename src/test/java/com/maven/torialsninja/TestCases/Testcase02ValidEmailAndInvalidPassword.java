@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import com.maven.torialsninja.pageobject.LandingPage;
 import com.maven.torialsninja.pageobject.LoginPage;
 
 
@@ -14,11 +15,12 @@ public class Testcase02ValidEmailAndInvalidPassword extends Baseclass {
 		
 		
 		driver.get(url);
-		driver.findElement(By.cssSelector(".caret")).click();
+		LandingPage landingPage=new LandingPage(driver);
+		landingPage.clickdropdowm();
 
-		 driver.findElement(By.xpath("//ul[@class='list-inline']/descendant::li[4]")).click();
-		 
-			
+		//driver.findElement(By.cssSelector(".caret")).click();
+		landingPage.loginbutton();
+		// driver.findElement(By.xpath("//ul[@class='list-inline']/descendant::li[4]")).click();
 		 
 		 
 			
