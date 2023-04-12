@@ -1,5 +1,6 @@
 package com.maven.torialsninja.pageobject;
 
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -27,6 +28,10 @@ public class LoginPage {
 	 @FindBy(xpath ="//div[contains(@class, 'well')]/descendant::input[3]")
 	 WebElement butnLogin;
 	 
+	 
+	 @FindBy(linkText ="Forgotten Password")
+	 WebElement forgotenpassword;
+	 
 	 public void setusername(String uasername) {
 		 textemail.sendKeys(uasername);
 		 
@@ -40,5 +45,28 @@ public class LoginPage {
 		 butnLogin.click();
 		 
 	 }
+	 
+	 public boolean forgottenbutondisspaly() {
+		 boolean displaystatus=forgotenpassword.isDisplayed();
+		 return displaystatus;
+	 }
+	 
+	 
+	 public void clickforgottenbuton() {
+		 forgotenpassword.click();
+		 
+	 }
+	 
+	 
+	 public void sendTabkeybordkey() {
+		 textemail.sendKeys(Keys.TAB);
+		 
+	 }
+	 
+	 public void sendEnterkeybordkey() {
+		 textemail.sendKeys(Keys.ENTER);
+		 
+	 }
+	 
 
 }

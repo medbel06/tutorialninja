@@ -8,7 +8,7 @@ import com.maven.torialsninja.pageobject.LandingPage;
 import com.maven.torialsninja.pageobject.LoginPage;
 
 
-public class Testcase03InValidEmailAndvalidPassword extends Baseclass {
+public class Testcase02_InValidEmail_And_validPassword extends Baseclass {
 
 	@Test
 	public void logittest() throws InterruptedException {
@@ -21,16 +21,15 @@ public class Testcase03InValidEmailAndvalidPassword extends Baseclass {
 		//driver.findElement(By.cssSelector(".caret")).click();
 		landingPage.loginbutton();
 		// driver.findElement(By.xpath("//ul[@class='list-inline']/descendant::li[4]")).click();
-			
 		 
 		 
 			
 			LoginPage lg =new LoginPage(driver);
 			
 			
-			lg.setusername(username);
+			lg.setusername(invalidusername);
 
-			lg.setpassword(invalidpassword);
+			lg.setpassword(password);
 
 			
 			lg.clickbuton();

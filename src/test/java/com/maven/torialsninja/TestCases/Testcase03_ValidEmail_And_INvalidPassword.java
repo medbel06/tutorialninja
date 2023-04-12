@@ -8,33 +8,37 @@ import com.maven.torialsninja.pageobject.LandingPage;
 import com.maven.torialsninja.pageobject.LoginPage;
 
 
-public class Testcase1ValidEmailAndPassword extends Baseclass {
+public class Testcase03_ValidEmail_And_INvalidPassword extends Baseclass {
 
 	@Test
 	public void logittest() throws InterruptedException {
 		
 		
 		driver.get(url);
-		
 		LandingPage landingPage=new LandingPage(driver);
 		landingPage.clickdropdowm();
 
 		//driver.findElement(By.cssSelector(".caret")).click();
 		landingPage.loginbutton();
 		// driver.findElement(By.xpath("//ul[@class='list-inline']/descendant::li[4]")).click();
-		 
 			
 		 
 		 
 			
 			LoginPage lg =new LoginPage(driver);
+			
+			
 			lg.setusername(username);
 
-			lg.setpassword(password);
+			lg.setpassword(invalidpassword);
 
-			lg.clickbuton();
 			
-			if(driver.getTitle().equals("My Account")) {
+			lg.clickbuton();
+			String actualwarninmessage=driver.findElement(By.cssSelector(".alert.alert-danger.alert-dismissible")).getText();
+			String expectedwarninmessage="Warning: No match for E-Mail Address and/or Password.";
+			
+			
+			if(actualwarninmessage.equals(expectedwarninmessage)) {
 				
 				Assert.assertTrue(true);
 				
@@ -43,8 +47,8 @@ public class Testcase1ValidEmailAndPassword extends Baseclass {
 				Assert.assertTrue(false);
 			}
 			
+			
+			
 	
 }
-	
-	
 }

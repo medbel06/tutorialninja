@@ -8,7 +8,7 @@ import com.maven.torialsninja.pageobject.LandingPage;
 import com.maven.torialsninja.pageobject.LoginPage;
 
 
-public class Testcase02ValidEmailAndInvalidPassword extends Baseclass {
+public class Testcase06_ForgottenButton extends Baseclass {
 
 	@Test
 	public void logittest() throws InterruptedException {
@@ -27,14 +27,27 @@ public class Testcase02ValidEmailAndInvalidPassword extends Baseclass {
 			LoginPage lg =new LoginPage(driver);
 			
 			
-			lg.setusername(invalidusername);
-
-			lg.setpassword(password);
+			
+			
 
 			
-			lg.clickbuton();
-			String actualwarninmessage=driver.findElement(By.cssSelector(".alert.alert-danger.alert-dismissible")).getText();
-			String expectedwarninmessage="Warning: No match for E-Mail Address and/or Password.";
+			
+			
+			
+			if(lg.forgottenbutondisspaly()) {
+				
+				Assert.assertTrue(true);
+				
+			}else {
+				
+				Assert.assertTrue(false);
+			}
+			
+			
+			lg.clickforgottenbuton();
+			
+			String actualwarninmessage=driver.findElement(By.xpath("//h1[contains(text(),'Forgot Your Password?')]")).getText();
+			String expectedwarninmessage="Forgot Your Password?";
 			
 			
 			if(actualwarninmessage.equals(expectedwarninmessage)) {
