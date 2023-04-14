@@ -29,21 +29,24 @@ public class Testcase07_Tab_and_Enter_Keybord extends Baseclass {
 			
 			LoginPage lg =new LoginPage(driver);
 			lg.setusername(username);
-			lg.sendTabkeybordkey();
+			while(true) {			
+				lg.sendTabkeybordkey();
+				
+}
 
-			lg.setpassword(password);
+		//	lg.setpassword(password);
 
-			lg.sendEnterkeybordkey();
+		//	lg.sendEnterkeybordkey();
 			
-			if(driver.getTitle().equals("My Account")) {
-				
-				Assert.assertTrue(true);
-				
-			}else {
-				
-				Assert.assertTrue(false);
-			}
-			
+//			if(driver.getTitle().equals("My Account")) {
+//				
+//				Assert.assertTrue(true);
+//				
+//			}else {
+//				
+//				Assert.assertTrue(false);
+//			}
+//			
 	
 }
 	

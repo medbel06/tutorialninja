@@ -32,9 +32,10 @@ public class LoginPage {
 	 @FindBy(linkText ="Forgotten Password")
 	 WebElement forgotenpassword;
 	 
+	 
 	 public void setusername(String uasername) {
 		 textemail.sendKeys(uasername);
-		 
+		 		 
 	 }
 
 	 public void setpassword(String pass) {
@@ -57,14 +58,15 @@ public class LoginPage {
 		 
 	 }
 	 
-	 
+	 WebElement ele;
+
 	 public void sendTabkeybordkey() {
-		 textemail.sendKeys(Keys.TAB);
+		 ele.sendKeys(Keys.TAB);
 		 
 	 }
 	 
 	 public void sendEnterkeybordkey() {
-		 textemail.sendKeys(Keys.ENTER);
+		 ele.sendKeys(Keys.ENTER);
 		 
 	 }
 	 

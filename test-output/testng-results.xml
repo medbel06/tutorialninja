@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-04-12T04:16:46 EDT" name="Default suite" finished-at="2023-04-12T04:16:53 EDT" duration-ms="6757">
+  <suite started-at="2023-04-14T00:29:22 EDT" name="Default suite" finished-at="2023-04-14T00:29:29 EDT" duration-ms="7172">
     <groups>
     </groups>
-    <test started-at="2023-04-12T04:16:46 EDT" name="Default test" finished-at="2023-04-12T04:16:53 EDT" duration-ms="6757">
-      <class name="com.maven.torialsninja.TestCases.Testcase07_Tab_and_Enter_Keybord">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.maven.torialsninja.TestCases.Testcase07_Tab_and_Enter_Keybord@15043a2f]" started-at="2023-04-12T04:16:46 EDT" name="setup" finished-at="2023-04-12T04:16:48 EDT" duration-ms="1824" status="PASS">
+    <test started-at="2023-04-14T00:29:22 EDT" name="Default test" finished-at="2023-04-14T00:29:29 EDT" duration-ms="7172">
+      <class name="com.maven.torialsninja.TestCases.Testcase04_InValidEmail_And_INvalidPassword2">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.maven.torialsninja.TestCases.Testcase04_InValidEmail_And_INvalidPassword2@196a42c3]" started-at="2023-04-14T00:29:22 EDT" name="setup" finished-at="2023-04-14T00:29:24 EDT" duration-ms="1836" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="logittest()[pri:0, instance:com.maven.torialsninja.TestCases.Testcase07_Tab_and_Enter_Keybord@15043a2f]" started-at="2023-04-12T04:16:48 EDT" name="logittest" finished-at="2023-04-12T04:16:52 EDT" duration-ms="4702" status="FAIL">
+        <test-method signature="logittest()[pri:0, instance:com.maven.torialsninja.TestCases.Testcase04_InValidEmail_And_INvalidPassword2@196a42c3]" started-at="2023-04-14T00:29:24 EDT" name="logittest" finished-at="2023-04-14T00:29:29 EDT" duration-ms="5287" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[expected [true] but found [false]]]>
@@ -22,7 +22,7 @@ at org.testng.Assert.fail(Assert.java:110)
 at org.testng.Assert.failNotEquals(Assert.java:1577)
 at org.testng.Assert.assertTrue(Assert.java:56)
 at org.testng.Assert.assertTrue(Assert.java:66)
-at com.maven.torialsninja.TestCases.Testcase07_Tab_and_Enter_Keybord.logittest(Testcase07_Tab_and_Enter_Keybord.java:44)
+at com.maven.torialsninja.TestCases.Testcase04_InValidEmail_And_INvalidPassword2.logittest(Testcase04_InValidEmail_And_INvalidPassword2.java:46)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -57,11 +57,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logittest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.maven.torialsninja.TestCases.Testcase07_Tab_and_Enter_Keybord@15043a2f]" started-at="2023-04-12T04:16:52 EDT" name="tearDown" finished-at="2023-04-12T04:16:53 EDT" duration-ms="179" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.maven.torialsninja.TestCases.Testcase07_Tab_and_Enter_Keybord -->
+      </class> <!-- com.maven.torialsninja.TestCases.Testcase04_InValidEmail_And_INvalidPassword2 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
