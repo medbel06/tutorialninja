@@ -1,4 +1,4 @@
-package com.maven.torialsninja.TestCases;
+package old_projectTestCases;
 
 import org.openqa.selenium.By;
 import org.testng.Assert;
@@ -8,7 +8,7 @@ import com.maven.torialsninja.pageobject.LandingPage;
 import com.maven.torialsninja.pageobject.LoginPage;
 
 
-public class Testcase04_InValidEmail_And_INvalidPassword2 extends Baseclass {
+public class Testcase03_ValidEmail_And_INvalidPassword extends Baseclass {
 
 	@Test
 	public void logittest() throws InterruptedException {
@@ -21,13 +21,14 @@ public class Testcase04_InValidEmail_And_INvalidPassword2 extends Baseclass {
 		//driver.findElement(By.cssSelector(".caret")).click();
 		landingPage.loginbutton();
 		// driver.findElement(By.xpath("//ul[@class='list-inline']/descendant::li[4]")).click();
+			
 		 
 		 
 			
 			LoginPage lg =new LoginPage(driver);
 			
 			
-			lg.setusername(invalidusername);
+			lg.setusername(username);
 
 			lg.setpassword(invalidpassword);
 

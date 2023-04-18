@@ -1,4 +1,4 @@
-package com.maven.torialsninja.TestCases;
+package old_projectTestCases;
 
 import java.time.Duration;
 import java.util.concurrent.TimeUnit;

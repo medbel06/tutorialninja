@@ -3,12 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.maven.torialsninja.TestCases.Testcase04_InValidEmail_And_INvalidPassword2">
+      <class name="Login_TestCases.Login_testcases">
         <methods>
+          <include name="tearDown"/>
+          <include name="Testcase02_InValidEmail_And_validPassword"/>
           <include name="setup"/>
-          <include name="logittest"/>
         </methods>
-      </class> <!-- com.maven.torialsninja.TestCases.Testcase04_InValidEmail_And_INvalidPassword2 -->
+      </class> <!-- Login_TestCases.Login_testcases -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

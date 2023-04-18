@@ -1,4 +1,4 @@
-package com.maven.torialsninja.TestCases;
+package old_projectTestCases;
 
 import org.openqa.selenium.By;
 import org.testng.Assert;
@@ -8,7 +8,7 @@ import com.maven.torialsninja.pageobject.LandingPage;
 import com.maven.torialsninja.pageobject.LoginPage;
 
 
-public class Testcase01_ValidEmail_And_VALIDPassword extends Baseclass {
+public class Testcase07_Tab_and_Enter_Keybord extends Baseclass {
 
 	@Test
 	public void logittest() throws InterruptedException {
@@ -19,7 +19,9 @@ public class Testcase01_ValidEmail_And_VALIDPassword extends Baseclass {
 		LandingPage landingPage=new LandingPage(driver);
 		landingPage.clickdropdowm();
 
-		//driver.findElement(By.cssSelector(".caret")).click();
+		driver.findElement(By.cssSelector(".caret"));
+		
+		
 		landingPage.loginbutton();
 		// driver.findElement(By.xpath("//ul[@class='list-inline']/descendant::li[4]")).click();
 		 
@@ -29,20 +31,24 @@ public class Testcase01_ValidEmail_And_VALIDPassword extends Baseclass {
 			
 			LoginPage lg =new LoginPage(driver);
 			lg.setusername(username);
+			while(true) {			
+				lg.sendTabkeybordkey();
+				
+}
 
-			lg.setpassword(password);
+		//	lg.setpassword(password);
 
-			lg.clickbuton();
+		//	lg.sendEnterkeybordkey();
 			
-			if(driver.getTitle().equals("My Account")) {
-				
-				Assert.assertTrue(true);
-				
-			}else {
-				
-				Assert.assertTrue(false);
-			}
-			
+//			if(driver.getTitle().equals("My Account")) {
+//				
+//				Assert.assertTrue(true);
+//				
+//			}else {
+//				
+//				Assert.assertTrue(false);
+//			}
+//			
 	
 }
 	

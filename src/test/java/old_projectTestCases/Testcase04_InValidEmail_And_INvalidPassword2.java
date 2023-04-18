@@ -1,4 +1,4 @@
-package com.maven.torialsninja.TestCases;
+package old_projectTestCases;
 
 import org.openqa.selenium.By;
 import org.testng.Assert;
@@ -8,7 +8,7 @@ import com.maven.torialsninja.pageobject.LandingPage;
 import com.maven.torialsninja.pageobject.LoginPage;
 
 
-public class Testcase06_ForgottenButton extends Baseclass {
+public class Testcase04_InValidEmail_And_INvalidPassword2 extends Baseclass {
 
 	@Test
 	public void logittest() throws InterruptedException {
@@ -27,27 +27,14 @@ public class Testcase06_ForgottenButton extends Baseclass {
 			LoginPage lg =new LoginPage(driver);
 			
 			
-			
-			
+			lg.setusername(invalidusername);
+
+			lg.setpassword(invalidpassword);
 
 			
-			
-			
-			
-			if(lg.forgottenbutondisspaly()) {
-				
-				Assert.assertTrue(true);
-				
-			}else {
-				
-				Assert.assertTrue(false);
-			}
-			
-			
-			lg.clickforgottenbuton();
-			
-			String actualwarninmessage=driver.findElement(By.xpath("//h1[contains(text(),'Forgot Your Password?')]")).getText();
-			String expectedwarninmessage="Forgot Your Password?";
+			lg.clickbuton();
+			String actualwarninmessage=driver.findElement(By.cssSelector(".alert.alert-danger.alert-dismissible")).getText();
+			String expectedwarninmessage="Warning: No match for E-Mail Address and/or Password.";
 			
 			
 			if(actualwarninmessage.equals(expectedwarninmessage)) {
