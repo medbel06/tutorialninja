@@ -61,12 +61,12 @@ public class LoginPage {
 	 WebElement ele;
 
 	 public void sendTabkeybordkey() {
-		 ele.sendKeys(Keys.TAB);
+		 textemail.sendKeys(Keys.TAB);
 		 
 	 }
 	 
 	 public void sendEnterkeybordkey() {
-		 ele.sendKeys(Keys.ENTER);
+		 textemail.sendKeys(Keys.ENTER);
 		 
 	 }
 	 

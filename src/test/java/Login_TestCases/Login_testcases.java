@@ -269,5 +269,49 @@ public class Login_testcases extends Baseclass {
 			
 	
 }
+	@Test(priority = 7)
+	public void Tabbutton_enterbutton() throws InterruptedException {
+		
+		
+		driver.get(url);
+		
+		LandingPage landingPage=new LandingPage(driver);
+		landingPage.clickdropdowm();
+
+		driver.findElement(By.cssSelector(".caret"));
+		
+		
+		landingPage.loginbutton();
+		// driver.findElement(By.xpath("//ul[@class='list-inline']/descendant::li[4]")).click();
+		 
+			
+		 
+		 
+			
+			LoginPage lg =new LoginPage(driver);
+		//	driver.findElement(By.cssSelector(".fa.fa-phone"));
+			
+	lg.setusername(username);
+		lg.sendTabkeybordkey();
+			lg.setpassword(password);
+			lg.sendEnterkeybordkey();
+			
+			
+
+		//	lg.setpassword(password);
+
+		//	lg.sendEnterkeybordkey();
+			
+//			if(driver.getTitle().equals("My Account")) {
+//				
+//				Assert.assertTrue(true);
+//				
+//			}else {
+//				
+//				Assert.assertTrue(false);
+//			}
+//			
+	
+}
 	
 }

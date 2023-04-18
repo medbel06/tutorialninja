@@ -6,7 +6,7 @@
       <class name="Login_TestCases.Login_testcases">
         <methods>
           <include name="tearDown"/>
-          <include name="Testcase02_InValidEmail_And_validPassword"/>
+          <include name="Tabbutton_enterbutton"/>
           <include name="setup"/>
         </methods>
       </class> <!-- Login_TestCases.Login_testcases -->
