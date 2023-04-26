@@ -57,8 +57,7 @@ public class LoginPage {
 		 forgotenpassword.click();
 		 
 	 }
-	 
-	 WebElement ele;
+
 
 	 public void sendTabkeybordkey() {
 		 textemail.sendKeys(Keys.TAB);

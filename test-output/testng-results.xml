@@ -1,24 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="6" total="7" passed="1" failed="0" skipped="0">
+<testng-results ignored="10" total="11" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-04-18T04:29:15 EDT" name="Default suite" finished-at="2023-04-18T04:29:24 EDT" duration-ms="8804">
+  <suite started-at="2023-04-26T13:55:10 EDT" name="Default suite" finished-at="2023-04-26T13:55:17 EDT" duration-ms="6962">
     <groups>
     </groups>
-    <test started-at="2023-04-18T04:29:15 EDT" name="Default test" finished-at="2023-04-18T04:29:24 EDT" duration-ms="8804">
+    <test started-at="2023-04-26T13:55:10 EDT" name="Default test" finished-at="2023-04-26T13:55:17 EDT" duration-ms="6962">
       <class name="Login_TestCases.Login_testcases">
-        <test-method is-config="true" signature="setup()[pri:0, instance:Login_TestCases.Login_testcases@61001b64]" started-at="2023-04-18T04:29:15 EDT" name="setup" finished-at="2023-04-18T04:29:16 EDT" duration-ms="1424" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:Login_TestCases.Login_testcases@4b8ee4de]" started-at="2023-04-26T13:55:10 EDT" name="setup" finished-at="2023-04-26T13:55:11 EDT" duration-ms="1501" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="Tabbutton_enterbutton()[pri:7, instance:Login_TestCases.Login_testcases@61001b64]" started-at="2023-04-18T04:29:16 EDT" name="Tabbutton_enterbutton" finished-at="2023-04-18T04:29:24 EDT" duration-ms="7204" status="PASS">
+        <test-method signature="Testcase12_passwordhiding()[pri:12, instance:Login_TestCases.Login_testcases@4b8ee4de]" started-at="2023-04-26T13:55:11 EDT" name="Testcase12_passwordhiding" finished-at="2023-04-26T13:55:17 EDT" duration-ms="5436" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Tabbutton_enterbutton -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:Login_TestCases.Login_testcases@61001b64]" started-at="2023-04-18T04:29:24 EDT" name="tearDown" finished-at="2023-04-18T04:29:24 EDT" duration-ms="144" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
+        </test-method> <!-- Testcase12_passwordhiding -->
       </class> <!-- Login_TestCases.Login_testcases -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->

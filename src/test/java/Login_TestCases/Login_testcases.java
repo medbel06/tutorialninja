@@ -3,6 +3,7 @@ package Login_TestCases;
 
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -270,7 +271,7 @@ public class Login_testcases extends Baseclass {
 	
 }
 	@Test(priority = 7)
-	public void Tabbutton_enterbutton() throws InterruptedException {
+	public void Testcase07_Tabbutton_enterbutton() throws InterruptedException {
 		
 		
 		driver.get(url);
@@ -313,5 +314,246 @@ public class Login_testcases extends Baseclass {
 //			
 	
 }
+	
+	
+	
+	
+	
+	@Test(priority = 8)
+	public void Testcase08_place_holder_text() throws InterruptedException {
+		
+		
+		driver.get(url);
+		
+		LandingPage landingPage=new LandingPage(driver);
+		landingPage.clickdropdowm();
+
+		driver.findElement(By.cssSelector(".caret"));
+		
+		
+		landingPage.loginbutton();
+		// driver.findElement(By.xpath("//ul[@class='list-inline']/descendant::li[4]")).click();
+		 
+			
+		 
+		 
+			
+			LoginPage lg =new LoginPage(driver);
+			String expectedemailplaceholder="E-Mail Address";
+			String emailplaceholder=driver.findElement(By.xpath("//input[@placeholder='E-Mail Address']")).getAttribute("placeholder");
+			
+			String expectedpasswordplaceholder="Password";
+			String passwordplaceholder=driver.findElement(By.xpath("//input[@placeholder='Password']")).getAttribute("placeholder");
+			
+			if(expectedemailplaceholder.equals(emailplaceholder) && expectedpasswordplaceholder.equals(passwordplaceholder)) {
+				
+				Assert.assertTrue(true);
+				
+			}else {
+				
+				Assert.assertTrue(false);
+			}
+			
+	
+}
+	
+	@Test(priority = 9)
+	public void Testcase09_logoutbackbutton() throws InterruptedException {
+		
+		
+
+		driver.get(url);
+		
+		LandingPage landingPage=new LandingPage(driver);
+		landingPage.clickdropdowm();
+
+		//driver.findElement(By.cssSelector(".caret")).click();
+		landingPage.loginbutton();
+		// driver.findElement(By.xpath("//ul[@class='list-inline']/descendant::li[4]")).click();
+		 
+			
+		 
+		 
+			
+			LoginPage lg =new LoginPage(driver);
+			lg.setusername(username);
+
+			lg.setpassword(password);
+
+			lg.clickbuton();
+			
+			if(driver.getTitle().equals("My Account")) {
+				
+				Assert.assertTrue(true);
+				
+			}else {
+				
+				Assert.assertTrue(false);
+			}
+			
+			
+			driver.navigate().back();
+			
+			if(driver.getTitle().equals("My Account")) {
+				
+				Assert.assertTrue(true);
+				
+			}else {
+				
+				Assert.assertTrue(false);
+			}
+			
+
+	
+	
+}
+	
+	
+	@Test(priority = 10)
+	public void Testcase10_logoutdropdownbackbutton() throws InterruptedException {
+		
+		
+
+		driver.get(url);
+		
+		LandingPage landingPage=new LandingPage(driver);
+		landingPage.clickdropdowm();
+
+		//driver.findElement(By.cssSelector(".caret")).click();
+		landingPage.loginbutton();
+		// driver.findElement(By.xpath("//ul[@class='list-inline']/descendant::li[4]")).click();
+		 
+			
+		 
+		 
+			
+			LoginPage lg =new LoginPage(driver);
+			lg.setusername(username);
+
+			lg.setpassword(password);
+
+			lg.clickbuton();
+			
+			if(driver.getTitle().equals("My Account")) {
+				
+				Assert.assertTrue(true);
+				
+			}else {
+				
+				Assert.assertTrue(false);
+			}
+			
+			
+			landingPage.clickdropdowm();
+			driver.findElement(By.partialLinkText("Logout")).click();
+		
+
+			
+			
+			driver.navigate().back();
+			
+			if(!driver.getTitle().equals("My Account")) {
+				
+				Assert.assertTrue(true);
+				
+			}else {
+				
+				Assert.assertTrue(false);
+			}
+			
+
+	
+	
+}
+	
+	
+	
+	
+//	@Test(priority = 11,invocationCount=5 )
+//	public void Testcase11_Repeatlogin5times() throws InterruptedException {
+//		
+//	
+//
+//		driver.get(url);
+//		
+//		LandingPage landingPage=new LandingPage(driver);
+//		landingPage.clickdropdowm();
+//
+//		//driver.findElement(By.cssSelector(".caret")).click();
+//		landingPage.loginbutton();
+//		// driver.findElement(By.xpath("//ul[@class='list-inline']/descendant::li[4]")).click();
+//		 
+//			
+//		 
+//		 
+//			
+//			LoginPage lg =new LoginPage(driver);
+//			lg.setusername(invalidusername);
+//
+//			lg.setpassword(password);
+//
+//			lg.clickbuton();
+//			
+//			String expectedmessage="Your account has exceeded allowed number of login attempts. Please try again in 1 hour.";
+//			String message=driver.findElement(By.xpath("/html/body/div[2]/div[1]")).getText();
+//			
+//			System.out.println(c);
+//			
+//			if(message.equals(expectedmessage) ) {
+//				
+//				Assert.assertTrue(true);
+//				
+//			}else {
+//				
+//				Assert.assertTrue(false);
+//			}			
+//			
+//			
+
+	//
+	//
+	//
+	//
+//}
+	
+	
+	
+	@Test(priority = 12)
+	public void Testcase12_passwordhiding() throws InterruptedException {
+		
+		
+
+		driver.get(url);
+		
+		LandingPage landingPage=new LandingPage(driver);
+		landingPage.clickdropdowm();
+
+		//driver.findElement(By.cssSelector(".caret")).click();
+		landingPage.loginbutton();
+		// driver.findElement(By.xpath("//ul[@class='list-inline']/descendant::li[4]")).click();
+		 
+			
+		 
+		 
+			
+			LoginPage lg =new LoginPage(driver);
+			lg.setusername(username);
+
+			lg.setpassword(password);
+			
+			WebElement passwroood=driver.findElement(By.id("input-password"));
+
+			if (passwroood.getAttribute("type") == "password"){
+				System.out.println("okk");
+			}
+			
+			
+			
+		
+
+	
+	
+}
+	
 	
 }
